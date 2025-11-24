@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://jm1opshtc0eu"]
+
+[ext_resource type="Shader" uid="uid://dl0j5aji7d37u" path="res://addons/grass_particles/grass_particles_process.gdshader" id="1_ihmu7"]
+
+[resource]
+shader = ExtResource("1_ihmu7")
+shader_parameter/rows = 110.0
+shader_parameter/spacing = 9.328
+shader_parameter/grass_range = 500.0

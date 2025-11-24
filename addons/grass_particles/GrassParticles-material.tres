@@ -1,0 +1,22 @@
+[gd_resource type="ShaderMaterial" load_steps=4 format=3 uid="uid://cjmd7cwa8anwk"]
+
+[ext_resource type="Shader" uid="uid://cwsr8ybeh38wo" path="res://addons/grass_particles/grass_material.gdshader" id="1_ynd1n"]
+[ext_resource type="Texture2D" uid="uid://fnl0pcavrqt3" path="res://addons/grass_particles/random_noise.png" id="2_ynd1n"]
+[ext_resource type="Texture2D" uid="uid://bps4ia0pb1w4k" path="res://addons/grass_particles/pixel_art_grass_spritesheet.png" id="3_uoeep"]
+
+[resource]
+shader = ExtResource("1_ynd1n")
+shader_parameter/spritesheet = ExtResource("3_uoeep")
+shader_parameter/random_noise = ExtResource("2_ynd1n")
+shader_parameter/frames = 4
+shader_parameter/top_color = Color(0.686275, 0.929412, 0.294118, 1)
+shader_parameter/bottom_color = Color(0.313726, 0.435294, 0.172549, 1)
+shader_parameter/player_pos = Vector2(0, 0)
+shader_parameter/player_radius = 40.0
+shader_parameter/player_radius_blend = 40.0
+shader_parameter/wind_time = 0.0
+shader_parameter/wind_strength = 0.25
+shader_parameter/wind_frequency = 0.03
+shader_parameter/wind_direction = Vector2(1, 0)
+shader_parameter/distribution_frequency = 0.1
+shader_parameter/distribution_threshold = 0.5

@@ -1,0 +1,31 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="2d Grass"
+config/features=PackedStringArray("4.5")
+config/icon="res://icon.png"
+
+[editor]
+
+movie_writer/movie_file="G:/GD-NEW/oasia/1/Godot_2D_Grass_Particles-main/1.ogv"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/grass_particles/plugin.cfg")
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"

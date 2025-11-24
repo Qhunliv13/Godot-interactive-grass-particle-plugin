@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0b3umubd8gqc"]
+
+[ext_resource type="Texture2D" uid="uid://s1s7l4p63eij" path="res://icon.png" id="1"]
+[ext_resource type="Material" uid="uid://cjmd7cwa8anwk" path="res://addons/grass_particles/GrassParticles-material.tres" id="1_ufln8"]
+[ext_resource type="Material" uid="uid://jm1opshtc0eu" path="res://addons/grass_particles/GrassParticles.tres" id="3_s50qh"]
+
+[node name="GrassParticles" type="GPUParticles2D"]
+material = ExtResource("1_ufln8")
+amount = 12100
+texture = ExtResource("1")
+lifetime = 999999.0
+explosiveness = 1.0
+process_material = ExtResource("3_s50qh")

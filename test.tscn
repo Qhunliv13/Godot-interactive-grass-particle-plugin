@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://dp4hyh8k8ya8j"]
+
+[ext_resource type="Script" uid="uid://ba0dfo0dvw0uu" path="res://test.gd" id="1_6uqi0"]
+[ext_resource type="Script" uid="uid://dj04w6l1jblgo" path="res://addons/grass_particles/GrassParticlesNode.gd" id="2_6uqi0"]
+[ext_resource type="Script" uid="uid://cj5garmm7eom4" path="res://player.gd" id="2_8uh7m"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_6uqi0")
+fade_out_max_distance = 200.0
+player_radius = 100.0
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(538, 555)
+script = ExtResource("2_8uh7m")
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+
+[node name="Sprite2D" type="ColorRect" parent="Player"]
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+color = Color(0.2, 0.6, 1, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="GrassParticlesNode" type="Node2D" parent="."]
+script = ExtResource("2_6uqi0")
+grass_range = 10000.0
+grass_amount = 1000000
+visibility_range = 20000.0
+metadata/_custom_type_script = "uid://dj04w6l1jblgo"
