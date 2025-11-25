@@ -16,6 +16,8 @@ uniform float wind_strength = 0.25;
 uniform float wind_frequency = 0.03;
 uniform vec2 wind_direction = vec2(1.0, 0.0);
 
+uniform float grass_size = 1.0;
+
 uniform float distribution_frequency = 0.1;
 uniform float distribution_threshold = 0.5;
 
@@ -130,6 +132,7 @@ void vertex(){
 	
 	float rotation = player_rotation + wind_rotation;
 	VERTEX = rotateUV(VERTEX, rotation, vec2(0.0));
+	VERTEX *= grass_size;
 }
 
 void fragment(){

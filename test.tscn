@@ -6,8 +6,6 @@
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_6uqi0")
-fade_out_max_distance = 200.0
-player_radius = 100.0
 
 [node name="Player" type="CharacterBody2D" parent="."]
 position = Vector2(538, 555)
@@ -25,7 +23,8 @@ metadata/_edit_use_anchors_ = true
 
 [node name="GrassParticlesNode" type="Node2D" parent="."]
 script = ExtResource("2_6uqi0")
-grass_range = 10000.0
-grass_amount = 1000000
-visibility_range = 20000.0
+player_radius = 100.0
+grass_range = 1000.0
+grass_amount = 20000
+grass_size = 2.0
 metadata/_custom_type_script = "uid://dj04w6l1jblgo"

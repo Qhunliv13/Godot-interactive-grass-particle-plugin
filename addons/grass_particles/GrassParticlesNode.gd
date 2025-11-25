@@ -22,6 +22,7 @@ var wind_time: float = 0.0
 @export var grass_range: float = 500.0
 @export var grass_amount: int = 12100
 @export var visibility_range: float = 2000.0
+@export var grass_size: float = 1.0
 
 func _ready():
 	_instance_grass_particles()
@@ -84,6 +85,7 @@ func _update_shader_parameters():
 		material.set_shader_parameter("wind_strength", wind_strength)
 		material.set_shader_parameter("wind_frequency", wind_frequency)
 		material.set_shader_parameter("wind_direction", wind_direction)
+		material.set_shader_parameter("grass_size", grass_size)
 
 func set_player_position(pos: Vector2):
 	player_position = pos
@@ -111,6 +113,11 @@ func _set(property: StringName, value) -> bool:
 			grass_particles.amount = grass_amount
 			_update_grid_parameters()
 			grass_particles.restart()
+		notify_property_list_changed()
+		return true
+	elif property == "grass_size":
+		grass_size = value
+		_update_shader_parameters()
 		notify_property_list_changed()
 		return true
 	return false

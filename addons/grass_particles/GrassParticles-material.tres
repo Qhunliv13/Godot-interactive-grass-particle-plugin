@@ -18,5 +18,6 @@ shader_parameter/wind_time = 0.0
 shader_parameter/wind_strength = 0.25
 shader_parameter/wind_frequency = 0.03
 shader_parameter/wind_direction = Vector2(1, 0)
+shader_parameter/grass_size = 1.0
 shader_parameter/distribution_frequency = 0.1
 shader_parameter/distribution_threshold = 0.5
